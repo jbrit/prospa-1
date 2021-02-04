@@ -1,0 +1,69 @@
+.layoutContainer {
+  display: flex;
+  position: relative;
+}
+
+.navbar {
+  width: 358px;
+  height: 100vh;
+  background-color: #7e51ff;
+  padding: 32px;
+}
+
+.logo {
+  width: 108.95px;
+  height: 24px;
+  margin-bottom: 56px;
+}
+
+.lineContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 56px;
+  /* padding: auto -2px; */
+}
+.horizontalLine {
+  min-width: 54.98px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: white;
+}
+
+.create {
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+}
+
+.organise {
+  font-size: 14px;
+  line-height: 18px;
+  color: white;
+}
+
+.goldBox {
+  width: 294px;
+  height: 303.34px;
+  object-fit: cover;
+  margin: 118.58px 0 140.08px 0;
+}
+
+.footer {
+  color: white;
+}
+
+.itemContainer {
+  width: 100%;
+}
+
+.already {
+  position: absolute;
+  top: 37px;
+  right: 96px;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.sign {
+  color: #fa4a84;
+}

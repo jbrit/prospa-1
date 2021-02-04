@@ -7,6 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --dark: #1b003b;
+  --white: #ffffff;
+}
+
 * {
   box-sizing: border-box;
 }

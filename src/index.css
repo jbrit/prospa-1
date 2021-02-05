@@ -10,6 +10,11 @@ body {
 :root {
   --dark: #1b003b;
   --white: #ffffff;
+  --pink: #fa4a84;
+}
+
+a {
+  text-decoration: none;
 }
 
 * {

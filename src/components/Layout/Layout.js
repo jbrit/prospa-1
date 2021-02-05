@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import styles from './Layout.module.css';
 import logo from '../../assets/images/prospa-logo.svg';
 import goldBox from '../../assets/images/gold-box.svg';
+import {Link, Route} from 'react-router-dom';
 
 export default class Layout extends Component {
   render() {
@@ -26,7 +27,15 @@ export default class Layout extends Component {
         </div>
         <div className={styles.itemContainer}>
           <div className={styles.already}>
-            Already a member? <span className={styles.sign}>Sign In</span>
+            Already a member?{' '}
+            <Route exact path='/'>
+              <Link to='/sign-in' className={styles.sign}>
+                Sign In
+              </Link>
+            </Route>
+            <Link to='/' className={styles.sign}>
+              <Route path='/sign-in'>Sign Up</Route>
+            </Link>
           </div>
           {this.props.children}
         </div>

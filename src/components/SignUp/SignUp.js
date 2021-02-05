@@ -1,13 +1,15 @@
 import React from 'react';
 import styles from './SignUp.module.css';
 import TextInput from '../TextInput/TextInput';
+import Button from '../Button/Button';
+import arrow from '../../assets/images/arrow-down.svg';
 
 export default class SignUp extends React.Component {
   state = {
     input: {
       firstName: '',
       lastName: '',
-      number: '',
+      number: '+232',
     },
   };
 
@@ -38,16 +40,24 @@ export default class SignUp extends React.Component {
         />
 
         <span className={styles.contactContainer}>
-          <select
-            name='number'
-            onChange={(text) => this.handleText('number', text)}
-            value={this.state.input.number}
-          >
-            <option value='1'>1</option>
-            <option value='2'>2</option>
-            <option value='3'>3</option>
-            <option value='4'>4</option>
-          </select>
+          <div className={styles.pickerContainer}>
+            <div className={styles.country}>
+              <div className={styles.countryTitle}>country</div>
+              <div className={styles.countryNumber}>
+                {this.state.input.number}
+              </div>
+            </div>
+            <img src={arrow} alt='arrow' />
+
+            <select
+              name='number'
+              onChange={(text) => this.handleText('number', text)}
+            >
+              <option value='+232'>+232</option>
+              <option value='+233'>+233</option>
+              <option value='+234'>+234</option>
+            </select>
+          </div>
 
           <TextInput
             name={'Mobile number'}
@@ -61,6 +71,8 @@ export default class SignUp extends React.Component {
           onChange={(text) => this.handleText('email', text)}
           value={this.state.input.email}
         />
+
+        <Button title={'next'} to='/sign-in' />
       </div>
     );
   }

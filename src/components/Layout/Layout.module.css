@@ -45,11 +45,14 @@
   width: 294px;
   height: 303.34px;
   object-fit: cover;
-  margin: 118.58px 0 140.08px 0;
+  margin-top: 118.58px;
 }
 
 .footer {
   color: white;
+  position: absolute;
+  left: 32px;
+  bottom: 30px;
 }
 
 .itemContainer {

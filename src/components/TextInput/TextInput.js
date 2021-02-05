@@ -12,6 +12,7 @@ export default class TextInput extends React.Component {
           value={this.props.value}
           required
         />
+        <div className={styles.underline}></div>
         <label for={this.props.name}>{this.props.name}</label>
       </div>
     );

@@ -3,6 +3,7 @@ import styles from './SignUp.module.css';
 import TextInput from '../TextInput/TextInput';
 import Button from '../Button/Button';
 import arrow from '../../assets/images/arrow-down.svg';
+import Header from '../Header/Header';
 
 export default class SignUp extends React.Component {
   state = {
@@ -23,10 +24,10 @@ export default class SignUp extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <div className={styles.header}>Create your account</div>
-        <div className={styles.description}>
-          A short description about account types
-        </div>
+        <Header
+          title='Create your account'
+          subtitle={'A short description about account types'}
+        />
 
         <TextInput
           name={'First name'}
@@ -72,7 +73,7 @@ export default class SignUp extends React.Component {
           value={this.state.input.email}
         />
 
-        <Button title={'next'} to='/sign-in' />
+        <Button title={'next'} to='/next' />
       </div>
     );
   }

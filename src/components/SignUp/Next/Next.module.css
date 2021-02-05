@@ -1,0 +1,16 @@
+.container {
+  width: 376px;
+  margin: 0 auto;
+  margin-top: 167px;
+}
+.already {
+  position: absolute;
+  top: 37px;
+  right: 96px;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.sign {
+  color: #fa4a84;
+}

@@ -5,14 +5,21 @@ import goldBox from '../../assets/images/gold-box.svg';
 import {Link, Route} from 'react-router-dom';
 
 export default class Layout extends Component {
+  state = {
+    page: 'sign-up',
+  };
   render() {
     return (
       <div className={styles.layoutContainer}>
         <div className={styles.navbar}>
           <img src={logo} alt='Logo' className={styles.logo} />
           <div className={styles.lineContainer}>
-            {[0, 0, 0, 0, 0].map((item) => (
-              <div className={styles.horizontalLine} />
+            {[0, 0, 0, 0, 0].map((item, i) => (
+              <div
+                className={styles.horizontalLine}
+                style={{opacity: i !== 0 && `0.5`}}
+                key={i}
+              />
             ))}
           </div>
 
@@ -27,15 +34,18 @@ export default class Layout extends Component {
         </div>
         <div className={styles.itemContainer}>
           <div className={styles.already}>
-            Already a member?{' '}
-            <Route exact path='/'>
+            <Route exact path={'/'}>
+              Already a member?{' '}
               <Link to='/sign-in' className={styles.sign}>
                 Sign In
               </Link>
             </Route>
-            <Link to='/' className={styles.sign}>
-              <Route path='/sign-in'>Sign Up</Route>
-            </Link>
+            <Route path='/sign-in'>
+              Already a member?{' '}
+              <Link to='/' className={styles.sign}>
+                Sign Up
+              </Link>
+            </Route>
           </div>
           {this.props.children}
         </div>

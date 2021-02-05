@@ -8,10 +8,10 @@ import SignUp from './components/SignUp/SignUp';
 function App() {
   return (
     <div className='App'>
-      <Layout>
+      <Layout dark>
         <Route exact path='/' render={() => <SignUp />} />
-        <Route path='/sign-in' render={() => <SignIn />} />
-        <Route path='/next' render={() => <Next />} />
+        <Route exact path='/sign-in' render={() => <SignIn />} />
+        <Route exact path='/next' render={() => <Next />} />
       </Layout>
     </div>
   );

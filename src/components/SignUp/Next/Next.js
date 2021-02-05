@@ -5,6 +5,7 @@ import BussinessCard from '../../BussinessCard/BussinessCard';
 import Header from '../../Header/Header';
 import Button from '../../Button/Button';
 import styles from './Next.module.css';
+import leftArrow from '../../../assets/images/arrow-left.svg';
 
 export default class Next extends Component {
   state = {pressed: ''};
@@ -12,7 +13,9 @@ export default class Next extends Component {
     return (
       <div className={styles.container}>
         {this.signIn()}
-        <div className={styles.backButton} />
+        <Link to='/' className={styles.backButton}>
+          <img src={leftArrow} alt='arrow-left' />
+        </Link>
         <Header
           title={'Open a new business account'}
           subtitle={'A short description comes here'}

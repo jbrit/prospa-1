@@ -18,8 +18,18 @@
 .backButton {
   width: 32px;
   height: 32px;
-  border: 1px solid red;
+  border: 1px solid #eeeff7;
   position: absolute;
   left: 64px;
   top: 32px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backButton img {
+  width: 8.8px;
+  height: 16px;
+  object-fit: contain;
 }

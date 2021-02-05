@@ -29,7 +29,7 @@ export default class BussinessCard extends Component {
               ))}
             </div>
           </div>
-        )}{' '}
+        )}
       </div>
     );
   }

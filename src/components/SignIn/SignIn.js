@@ -38,7 +38,7 @@ export default class SignIn extends React.Component {
           value={this.state.input.password}
         />
 
-        <Button title={'next'} to='/' />
+        <Button title={'next'} to='/dashboard' />
       </div>
     );
   }

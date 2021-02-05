@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './SignIn.module.css';
 import TextInput from '../TextInput/TextInput';
 import Button from '../Button/Button';
+import Header from '../Header/Header';
 
 export default class SignIn extends React.Component {
   state = {
@@ -21,11 +22,10 @@ export default class SignIn extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <div className={styles.header}>Welcome back to Prospa</div>
-        <div className={styles.description}>
-          An account, with powerful, personalised tools
-          <br /> all in one place
-        </div>
+        <Header
+          title={'Welcome back to Prospa'}
+          subtitle={`An account, with powerful, personalised tools \n all in one place`}
+        />
 
         <TextInput
           name={'Enter email'}

@@ -19,6 +19,7 @@ a {
 
 * {
   box-sizing: border-box;
+  color: var(--dark);
 }
 
 code {

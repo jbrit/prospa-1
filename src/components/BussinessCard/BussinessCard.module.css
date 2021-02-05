@@ -1,0 +1,71 @@
+.container {
+  width: 100%;
+  min-height: 80px;
+  border-radius: 6px;
+  box-shadow: 0 0px 2px 0 #8397ab, 0 4px 8px 0 #8397ab;
+
+  padding: 14px 44px 14px 44px;
+  position: relative;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.topContainer {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  min-width: 17px;
+  height: 17px;
+  border: 1.5px solid #eeeff7;
+  border-radius: 17px;
+  margin-right: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 16px;
+}
+
+.header {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+.switch {
+  background-color: var(--pink);
+  min-width: 13px;
+  height: 13px;
+  border-radius: 13px;
+}
+
+.list {
+  display: flex;
+  color: #8397ab;
+  margin-top: 4px;
+}
+
+.listHeader {
+  color: #8397ab;
+  margin-bottom: 17px;
+}
+
+.list img {
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+  object-fit: contain;
+}
+
+.list div {
+  color: #8397ab;
+}
+
+.bottomContainer {
+  font-size: 13px;
+  line-height: 17px;
+  color: #8397ab !important;
+}

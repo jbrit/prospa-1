@@ -1,17 +1,33 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import {Data} from '../../../mock/cardData';
+import BussinessCard from '../../BussinessCard/BussinessCard';
 import Header from '../../Header/Header';
+import Button from '../../Button/Button';
 import styles from './Next.module.css';
 
 export default class Next extends Component {
+  state = {pressed: ''};
   render() {
     return (
       <div className={styles.container}>
+        {this.signIn()}
+        <div className={styles.backButton} />
         <Header
           title={'Open a new business account'}
           subtitle={'A short description comes here'}
         />
-        {this.signIn()}
+
+        {Data.map((item, i) => (
+          <BussinessCard
+            data={item}
+            pressed={this.state.pressed === i}
+            onClick={() => this.setState({pressed: i})}
+            key={i}
+          />
+        ))}
+
+        <Button title={'next'} to='/sign-in' />
       </div>
     );
   }

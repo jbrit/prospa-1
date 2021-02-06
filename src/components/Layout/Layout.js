@@ -16,7 +16,7 @@ const Layout = (props) => {
       >
         <img src={logo} alt='Logo' className={styles.logo} />
         <div className={styles.lineContainer}>
-          {[0, 0, 0, 0, 0].map((item, i) => (
+          {[0, 0, 0, 0, 0].map((_, i) => (
             <div
               className={styles.horizontalLine}
               style={{opacity: i !== 0 && `0.5`}}

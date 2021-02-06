@@ -10,8 +10,8 @@ export default function RecentCard() {
         <div className={styles.button}>See all</div>
       </div>
 
-      {RecentTransaction.map((item) => (
-        <div className={styles.row}>
+      {RecentTransaction.map((item, i) => (
+        <div className={styles.row} key={i}>
           <div className={styles.leftContainer}>
             <img src={item.icon} alt='icon' />
             <div>

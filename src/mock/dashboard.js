@@ -17,7 +17,7 @@ export const sideBarData = [
     icon: bank,
   },
   {
-    name: 'Tranfer',
+    name: 'Transfer',
     icon: transfer,
   },
   {
@@ -130,4 +130,11 @@ export const RecentTransaction = [
     price: '-N2,000.00',
     icon: receive,
   },
+];
+
+export const Dropdown = [
+  'Clayvant Inc',
+  'Business name 2',
+  'Business name 3',
+  'Add a business',
 ];

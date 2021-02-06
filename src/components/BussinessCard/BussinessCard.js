@@ -21,8 +21,8 @@ export default class BussinessCard extends Component {
           <div className={styles.bottomContainer}>
             <div className={styles.listHeader}>{data.head}</div>
             <div>
-              {data.body.map((item) => (
-                <span className={styles.list}>
+              {data.body.map((item, i) => (
+                <span className={styles.list} key={i}>
                   <img src={mark} alt='mark' start />
                   <div>{item}</div>
                 </span>

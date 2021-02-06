@@ -84,7 +84,7 @@
   }
 
   .itemContainer {
-    margin-right: 34px;
+    margin-right: 28px;
   }
 
   .headers {
@@ -97,5 +97,13 @@
     right: 0;
     left: 0;
     bottom: 70px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+
+  .price {
+    font-size: 12px;
   }
 }

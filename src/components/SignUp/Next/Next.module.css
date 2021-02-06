@@ -42,4 +42,8 @@
   .backButton {
     left: 24px;
   }
+  .container {
+    width: 85%;
+    margin-top: 147px;
+  }
 }

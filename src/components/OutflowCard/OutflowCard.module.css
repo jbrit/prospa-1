@@ -22,6 +22,9 @@
 
 .leftContainer img {
   margin-right: 16px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .leftContainer {
@@ -60,11 +63,15 @@
   .container {
     width: 95%;
     height: 336px;
+    margin-bottom: 18px;
   }
   .header {
     margin-bottom: 23px;
   }
   .row {
     margin-top: 36px;
+  }
+  .loader {
+    width: 180px;
   }
 }

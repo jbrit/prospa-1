@@ -12,3 +12,14 @@
   margin-bottom: 32px;
   white-space: pre-line;
 }
+
+@media only screen and (max-width: 475px) {
+  .title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}

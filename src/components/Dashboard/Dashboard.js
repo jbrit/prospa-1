@@ -10,19 +10,27 @@ import AccountCard from '../AccountCard/AccountCard';
 import SummaryCard from '../SummaryCard/SummaryCard';
 import OutflowCard from '../OutflowCard/OutflowCard';
 import RecentCard from '../RecentCard/RecentCard';
+import {Mobile} from '../../utils';
+import Slide from 'react-reveal/Slide';
 
 class Dashboard extends React.Component {
   state = {
     drop: false,
     option: 'transfer',
+    sidebar: false,
   };
   render() {
     return (
       <div className={styles.container}>
-        {this.renderSidebar()}
+        <Slide left={Mobile} when={this.state.sidebar}>
+          {this.renderSidebar()}
+        </Slide>
 
         <div className={styles.mainContainer}>
-          <div className={styles.header}>
+          <div
+            className={styles.header}
+            onClick={() => this.setState({sidebar: !this.state.sidebar})}
+          >
             <div className={styles.headerText}>Dashboard</div>
             <div className={styles.wrapper}>
               <div className={styles.bell}>
@@ -63,7 +71,12 @@ class Dashboard extends React.Component {
 
   renderSidebar() {
     return (
-      <div className={styles.sidebar}>
+      <div
+        className={styles.sidebar}
+        style={{
+          display: Mobile && !this.state.sidebar && `none`,
+        }}
+      >
         <img src={prospa} alt='logo' />
         <div className={styles.sidebarHeader}>
           <div className={styles.initials}>BN</div>

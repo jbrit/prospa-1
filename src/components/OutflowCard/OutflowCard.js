@@ -15,7 +15,12 @@ const OutflowCard = () => {
           </div>
           <span className={styles.rightContainer}>
             <div className={styles.price}>{item.price}</div>
-            <div className={styles.loader}></div>
+            <div className={styles.loader}>
+              <div
+                className={styles.loaderValue}
+                style={{width: `${item.percentage}%`}}
+              />
+            </div>
           </span>
         </div>
       ))}

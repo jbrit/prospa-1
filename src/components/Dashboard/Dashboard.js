@@ -9,6 +9,7 @@ import Button from '../Button/Button';
 import AccountCard from '../AccountCard/AccountCard';
 import SummaryCard from '../SummaryCard/SummaryCard';
 import OutflowCard from '../OutflowCard/OutflowCard';
+import RecentCard from '../RecentCard/RecentCard';
 
 class Dashboard extends React.Component {
   render() {
@@ -51,6 +52,7 @@ class Dashboard extends React.Component {
         ))}
         <SummaryCard />
         <OutflowCard />
+        <RecentCard />
       </div>
     );
   }

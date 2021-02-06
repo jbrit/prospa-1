@@ -8,6 +8,8 @@ import bankFees from '../assets/images/bank-fees.svg';
 import internet from '../assets/images/internet.svg';
 import marketing from '../assets/images/marketing.svg';
 import transferSvg from '../assets/images/transfer.svg';
+import grayTranfer from '../assets/images/transfer-gray.svg';
+import receive from '../assets/images/receive.svg';
 
 export const sideBarData = [
   {
@@ -100,5 +102,32 @@ export const OutflowData = [
     price: '- N 250,000',
     icon: transferSvg,
     percentage: 21,
+  },
+];
+
+export const RecentTransaction = [
+  {
+    title: 'Transfer Fee',
+    time: '12:49 AM',
+    price: '-N145.90',
+    icon: grayTranfer,
+  },
+  {
+    title: 'Adam Chapman',
+    time: '12:49 AM',
+    price: '-N2,000.00',
+    icon: receive,
+  },
+  {
+    title: 'Shirley Barnes',
+    time: '12:49 AM',
+    price: '-N2,000.00',
+    icon: receive,
+  },
+  {
+    title: 'Shirley Barnes',
+    time: '12:49 AM',
+    price: '-N2,000.00',
+    icon: receive,
   },
 ];

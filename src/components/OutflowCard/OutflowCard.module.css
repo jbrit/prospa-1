@@ -7,6 +7,7 @@
   background-color: white;
   border-radius: 6px;
   position: relative;
+  margin-bottom: 28px;
 }
 
 .header {
@@ -19,12 +20,19 @@
   margin-top: 46px;
 }
 
-img {
+.leftContainer img {
   margin-right: 16px;
 }
 
 .leftContainer {
   display: flex;
+  width: -webkit-fill-available;
+}
+
+.leftContainer span {
+  color: var(--ash);
+  font-size: 14px;
+  line-height: 19px;
 }
 
 .loader {
@@ -32,10 +40,18 @@ img {
   height: 6px;
   border-radius: 3px;
   background-color: #eeeff7;
+  overflow: hidden;
 }
 
 .price {
   font-size: 14px;
   line-height: 19px;
-  margin-bottom: -1px;
+  margin-bottom: 1px;
+  font-weight: 600;
+}
+
+.loader .loaderValue {
+  height: 100%;
+  background-color: var(--yellow);
+  border-radius: 3px;
 }

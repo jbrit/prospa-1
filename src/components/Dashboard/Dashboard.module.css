@@ -255,4 +255,11 @@
     width: 100%;
     justify-content: center;
   }
+
+  .menu {
+    width: 20px;
+    margin-right: -45px;
+    z-index: 40;
+    /* margin-left: -25px; */
+  }
 }

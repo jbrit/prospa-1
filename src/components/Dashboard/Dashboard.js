@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Dashboard.module.css';
 import arrowDownThin from '../../assets/images/arrow-down-thin.svg';
 import avatar from '../../assets/images/avatar.svg';
+import menu from '../../assets/images/menu.svg';
 import bell from '../../assets/images/bell.svg';
 import {AccountDetails, sideBarData, Dropdown} from '../../mock/dashboard';
 import prospa from '../../assets/images/gray-logo.svg';
@@ -17,11 +18,11 @@ import Fade from 'react-reveal/Fade';
 class Dashboard extends React.Component {
   state = {
     drop: false,
-    option: 'transfer',
+    option: 'account',
     sidebar: false,
   };
+
   render() {
-    console.log(Mobile);
     return (
       <div className={styles.container}>
         {Mobile ? (
@@ -37,6 +38,14 @@ class Dashboard extends React.Component {
             className={styles.header}
             onClick={() => this.setState({sidebar: !this.state.sidebar})}
           >
+            {Mobile && (
+              <img
+                src={menu}
+                alt='menu'
+                className={styles.menu}
+                onClick={() => this.setState({sidebar: !this.state.sidebar})}
+              />
+            )}
             <div className={styles.headerText}>Dashboard</div>
             <div className={styles.wrapper}>
               <div className={styles.bell}>
@@ -82,6 +91,7 @@ class Dashboard extends React.Component {
         style={{
           display: Mobile && !this.state.sidebar && `none`,
         }}
+        ref={this.container}
       >
         <img src={prospa} alt='logo' />
         <div className={styles.sidebarHeader}>

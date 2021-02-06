@@ -45,4 +45,16 @@
     width: 350px;
     height: 160px;
   }
+  .amount {
+    font-size: 33px;
+    line-height: 43px;
+  }
+  .details {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .type {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }

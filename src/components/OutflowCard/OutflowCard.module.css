@@ -55,3 +55,16 @@
   background-color: var(--yellow);
   border-radius: 3px;
 }
+
+@media only screen and (max-width: 475px) {
+  .container {
+    width: 95%;
+    height: 336px;
+  }
+  .header {
+    margin-bottom: 23px;
+  }
+  .row {
+    margin-top: 36px;
+  }
+}

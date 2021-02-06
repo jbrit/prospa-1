@@ -9,6 +9,9 @@
   background-color: white;
   box-shadow: 0px 2px 22px 0px rgba(131, 151, 171, 0.25);
   position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .sidebar > img {
@@ -108,6 +111,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
 }
 
 .header .headerText {
@@ -134,10 +139,11 @@
 }
 
 .welcome {
-  margin: 36px 90px;
+  margin: 36px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 960px;
 }
 
 .welcome .title {
@@ -157,4 +163,13 @@
 .welcome .subtitle span {
   color: var(--pink);
   text-decoration: underline;
+}
+
+.cardSection {
+  border: 1px solid red;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 960px;
+  flex-wrap: wrap;
 }

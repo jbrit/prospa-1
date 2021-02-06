@@ -7,42 +7,48 @@ import {AccountDetails, sideBarData} from '../../mock/dashboard';
 import prospa from '../../assets/images/gray-logo.svg';
 import Button from '../Button/Button';
 import AccountCard from '../AccountCard/AccountCard';
+import SummaryCard from '../SummaryCard/SummaryCard';
 
 class Dashboard extends React.Component {
   render() {
     return (
       <div className={styles.container}>
         {this.renderSidebar()}
-        {this.renderMainScreen()}
+
+        <div className={styles.mainContainer}>
+          <div className={styles.header}>
+            <div className={styles.headerText}>Dashboard</div>
+            <div className={styles.wrapper}>
+              <div className={styles.bell}>
+                <img src={bell} alt='bell' />
+              </div>
+              <img src={avatar} alt='avatar' />
+            </div>
+          </div>
+
+          <div className={styles.welcome}>
+            <div>
+              <div className={styles.title}>Welcome back, Kathy</div>
+              <div className={styles.subtitle}>
+                Here’s what has been happening in the last <span>7 days</span>
+              </div>
+            </div>
+            <Button title='Add a sub account' width />
+          </div>
+
+          {this.renderCards()}
+        </div>
       </div>
     );
   }
 
-  renderMainScreen() {
+  renderCards() {
     return (
-      <div className={styles.mainContainer}>
-        <div className={styles.header}>
-          <div className={styles.headerText}>Dashboard</div>
-          <div className={styles.wrapper}>
-            <div className={styles.bell}>
-              <img src={bell} alt='bell' />
-            </div>
-            <img src={avatar} alt='avatar' />
-          </div>
-        </div>
-
-        <div className={styles.welcome}>
-          <div>
-            <div className={styles.title}>Welcome back, Kathy</div>
-            <div className={styles.subtitle}>
-              Here’s what has been happening in the last <span>7 days</span>
-            </div>
-          </div>
-          <Button title='Add a sub account' width />
-        </div>
+      <div className={styles.cardSection}>
         {AccountDetails.map((item, i) => (
           <AccountCard data={item} key={i} />
         ))}
+        <SummaryCard />
       </div>
     );
   }

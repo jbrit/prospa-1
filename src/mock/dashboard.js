@@ -48,3 +48,26 @@ export const AccountDetails = [
     kobo: '.45',
   },
 ];
+
+export const SummaryData = [
+  {
+    headers: [
+      {
+        title: 'Money in',
+        price: 'N 5,650,000',
+      },
+      {
+        title: 'Money out',
+        price: 'N 5,650,000',
+      },
+      {
+        title: 'Difference',
+        price: 'N 5,650,000',
+      },
+    ],
+
+    xData: ['20k', '15k', '10k', '5k', '0'],
+
+    yData: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug'],
+  },
+];

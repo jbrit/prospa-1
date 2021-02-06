@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="347px" height="102px" viewbox="0 0 347 102" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient x1="0.5" y1="0" x2="0.5" y2="1" id="gradient_1">
+      <stop offset="0" stop-color="#FA4A84" stop-opacity="0.2627451" />
+      <stop offset="1" stop-color="#FA4A84" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.895431 3.10457 0 2 0C0.895431 0 0 0.895431 0 2C0 3.10457 0.895431 4 2 4Z" transform="translate(0.5 66.5)" id="Oval" fill="#FFFFFF" fill-rule="evenodd" stroke="#FA4A84" stroke-width="1" />
+  <path d="M2 4C3.10457 4 4 3.10457 4 2C4 0.895431 3.10457 0 2 0C0.895431 0 0 0.895431 0 2C0 3.10457 0.895431 4 2 4Z" transform="translate(229.5 0.5)" id="Oval-Copy-4" fill="#FFFFFF" fill-rule="evenodd" stroke="#FA4A84" stroke-width="1" />
+  <g id="Group" transform="translate(3.4942627 1.7041016)">
+    <g id="Group-39" transform="translate(0.0057373047 0)">
+      <path d="M0.5 0.5L0.5 65.5" transform="translate(287 33.7959)" id="Line-4" fill="none" fill-rule="evenodd" stroke="#FA4A84" stroke-width="1" stroke-linecap="square" />
+      <path d="M0 66.7959C1 65.7959 29 36.7959 56 31.7959C83 26.7959 99 22.7959 105 15.7959C111 8.79594 146 -6.20406 171 2.79594C180.224 6.11647 190.4 6.71455 199.571 6.14707C215.556 5.15791 240.662 4.05469 255.16 10.8607C266.205 16.0457 278.371 23.3039 287 32.7959L343 53.7959" id="Path-2-Copy" fill="none" fill-rule="evenodd" stroke="#FA4A84" stroke-width="1" />
+    </g>
+    <path d="M0.00578035 66.7959C1.00578 65.7959 29.0058 36.7959 56.0058 31.7959C83.0058 26.7959 99.0058 22.7959 105.006 15.7959C111.006 8.79594 146.006 -6.20406 171.006 2.79594C196.006 11.7959 228.006 1.79594 228.006 1.79594C228.006 1.79594 267.006 10.7959 287.006 32.7959C307.006 54.7959 343.006 53.7959 343.006 53.7959C343.006 53.7959 343.006 66.7959 343.006 66.7959C343.006 66.7959 -0.99422 67.7959 0.00578035 66.7959Z" id="Path-2-Copy" fill="url(#gradient_1)" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>

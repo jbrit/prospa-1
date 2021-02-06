@@ -8,6 +8,7 @@
   height: 100vh;
   background-color: #7e51ff;
   padding: 32px;
+  transition: all 1s ease-in-out;
 }
 
 .logo {

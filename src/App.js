@@ -20,7 +20,7 @@ function App() {
           </Layout>
         )}
       />
-      <Route exact path='/dashboard' component={Dashboard} />
+      <Route path='/dashboard' component={Dashboard} />
     </div>
   );
 }

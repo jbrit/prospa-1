@@ -5,7 +5,11 @@ import styles from './Button.module.css';
 export default class Button extends Component {
   render() {
     return (
-      <Link to={this.props.to} className={styles.container}>
+      <Link
+        to={this.props.to}
+        className={styles.container}
+        style={{width: this.props.width && `171px`}}
+      >
         <div>{this.props.title}</div>
       </Link>
     );

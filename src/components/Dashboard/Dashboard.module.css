@@ -87,10 +87,74 @@
   object-fit: contain;
   margin-right: 16.2px;
   /* filter: grayscale(1); */
-  filter: grayscale(1);
 }
 
 .list div {
   text-transform: capitalize;
   color: #8397ab;
+}
+
+/*Second Part*/
+
+.mainContainer {
+  display: block;
+  width: 100%;
+}
+
+.header {
+  height: 80px;
+  background-color: white;
+  padding: 20px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .headerText {
+  font-size: 21px;
+  line-height: 28px;
+  color: var(--ash);
+}
+
+.header .bell {
+  width: 32px;
+  height: 32px;
+  border: 1.2px solid #eeeff7;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 5px;
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.welcome {
+  margin: 36px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome .title {
+  font-size: 28px;
+  line-height: 37px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.welcome .subtitle {
+  font-size: 16px;
+  line-height: 21px;
+  color: #8397ab;
+  white-space: pre-line;
+}
+
+.welcome .subtitle span {
+  color: var(--pink);
+  text-decoration: underline;
 }

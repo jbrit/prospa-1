@@ -1,12 +1,54 @@
 import React from 'react';
 import styles from './Dashboard.module.css';
 import arrowDownThin from '../../assets/images/arrow-down-thin.svg';
-import {sideBarData} from '../../mock/dashboard';
+import avatar from '../../assets/images/avatar.svg';
+import bell from '../../assets/images/bell.svg';
+import {AccountDetails, sideBarData} from '../../mock/dashboard';
 import prospa from '../../assets/images/gray-logo.svg';
+import Button from '../Button/Button';
+import AccountCard from '../AccountCard/AccountCard';
 
-const Dashboard = () => {
-  return (
-    <div className={styles.container}>
+class Dashboard extends React.Component {
+  render() {
+    return (
+      <div className={styles.container}>
+        {this.renderSidebar()}
+        {this.renderMainScreen()}
+      </div>
+    );
+  }
+
+  renderMainScreen() {
+    return (
+      <div className={styles.mainContainer}>
+        <div className={styles.header}>
+          <div className={styles.headerText}>Dashboard</div>
+          <div className={styles.wrapper}>
+            <div className={styles.bell}>
+              <img src={bell} alt='bell' />
+            </div>
+            <img src={avatar} alt='avatar' />
+          </div>
+        </div>
+
+        <div className={styles.welcome}>
+          <div>
+            <div className={styles.title}>Welcome back, Kathy</div>
+            <div className={styles.subtitle}>
+              Here’s what has been happening in the last <span>7 days</span>
+            </div>
+          </div>
+          <Button title='Add a sub account' width />
+        </div>
+        {AccountDetails.map((item, i) => (
+          <AccountCard data={item} key={i} />
+        ))}
+      </div>
+    );
+  }
+
+  renderSidebar() {
+    return (
       <div className={styles.sidebar}>
         <img src={prospa} alt='logo' />
         <div className={styles.sidebarHeader}>
@@ -29,8 +71,8 @@ const Dashboard = () => {
           </div>
         ))}
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default Dashboard;

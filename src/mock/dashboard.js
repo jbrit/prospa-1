@@ -4,6 +4,10 @@ import transfer from '../assets/images/transfer.png';
 import support from '../assets/images/support.png';
 import greenCard from '../assets/images/green-card.svg';
 import purpleCard from '../assets/images/purple-card.svg';
+import bankFees from '../assets/images/bank-fees.svg';
+import internet from '../assets/images/internet.svg';
+import marketing from '../assets/images/marketing.svg';
+import transferSvg from '../assets/images/transfer.svg';
 
 export const sideBarData = [
   {
@@ -69,5 +73,32 @@ export const SummaryData = [
     xData: ['20k', '15k', '10k', '5k', '0'],
 
     yData: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug'],
+  },
+];
+
+export const OutflowData = [
+  {
+    title: 'Bank Fees',
+    price: '- N 250,000',
+    icon: bankFees,
+    percentage: 92,
+  },
+  {
+    title: 'Internet',
+    price: '- N 250,000',
+    icon: internet,
+    percentage: 67,
+  },
+  {
+    title: 'Marketing',
+    price: '- N 250,000',
+    icon: marketing,
+    percentage: 38,
+  },
+  {
+    title: 'Transfer',
+    price: '- N 250,000',
+    icon: transferSvg,
+    percentage: 21,
   },
 ];

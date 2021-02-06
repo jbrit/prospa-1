@@ -8,6 +8,7 @@ import prospa from '../../assets/images/gray-logo.svg';
 import Button from '../Button/Button';
 import AccountCard from '../AccountCard/AccountCard';
 import SummaryCard from '../SummaryCard/SummaryCard';
+import OutflowCard from '../OutflowCard/OutflowCard';
 
 class Dashboard extends React.Component {
   render() {
@@ -49,6 +50,7 @@ class Dashboard extends React.Component {
           <AccountCard data={item} key={i} />
         ))}
         <SummaryCard />
+        <OutflowCard />
       </div>
     );
   }

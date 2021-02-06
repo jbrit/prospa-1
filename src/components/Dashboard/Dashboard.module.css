@@ -220,3 +220,35 @@
 .dropdownList:nth-child(3) {
   border-bottom: 0;
 }
+
+@media only screen and (max-width: 475px) {
+  .sidebar {
+    display: none;
+  }
+
+  .header {
+    padding: 20px 10%;
+  }
+
+  .welcome {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    padding-left: 20px;
+  }
+
+  .welcome .title {
+    font-size: 23px;
+    line-height: 30px;
+  }
+
+  .welcome .subtitle {
+    font-size: 12px;
+    line-height: 15.6px;
+  }
+
+  .cardSection {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -16,3 +16,9 @@
   line-height: 21px;
   text-transform: capitalize;
 }
+
+@media only screen and (max-width: 475px) {
+  .container {
+    height: 40px;
+  }
+}

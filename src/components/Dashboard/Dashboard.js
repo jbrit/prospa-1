@@ -77,12 +77,8 @@ class Dashboard extends React.Component {
         {AccountDetails.map((item, i) => (
           <AccountCard data={item} key={i} />
         ))}
-        <Fade bottom>
-          <SummaryCard />
-        </Fade>
-        <Fade bottom>
-          <OutflowCard />
-        </Fade>
+        <SummaryCard />
+        <OutflowCard />
         <RecentCard />
       </div>
     );

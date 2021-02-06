@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './OutflowCard.module.css';
 import {OutflowData} from '../../mock/dashboard';
+import Slide from 'react-reveal/Slide';
 
 const OutflowCard = () => {
   return (
@@ -16,10 +17,12 @@ const OutflowCard = () => {
           <span className={styles.rightContainer}>
             <div className={styles.price}>{item.price}</div>
             <div className={styles.loader}>
-              <div
-                className={styles.loaderValue}
-                style={{width: `${item.percentage}%`}}
-              />
+              <Slide left delay={500}>
+                <div
+                  className={styles.loaderValue}
+                  style={{width: `${item.percentage}%`}}
+                />
+              </Slide>
             </div>
           </span>
         </div>

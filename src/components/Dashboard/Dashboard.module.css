@@ -190,7 +190,7 @@
   margin-top: 12px;
   background-color: white;
   border-radius: 6px;
-
+  overflow: hidden;
   box-shadow: 0 4px 16px 0 rgba(131, 151, 171, 0.25);
 }
 

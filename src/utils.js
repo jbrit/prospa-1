@@ -1,2 +1,12 @@
-export const Mobile = window.innerWidth < 475;
-export const PC = window.innerWidth > 475;
+export const Mobile = getWidth() < 475;
+export const PC = getWidth() > 475;
+
+function getWidth() {
+  return Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  );
+}

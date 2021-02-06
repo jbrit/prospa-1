@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './RecentCard.module.css';
 import {RecentTransaction} from '../../mock/dashboard';
+import Fade from 'react-reveal/Fade';
 
 export default function RecentCard() {
   return (
@@ -11,17 +12,19 @@ export default function RecentCard() {
       </div>
 
       {RecentTransaction.map((item, i) => (
-        <div className={styles.row} key={i}>
-          <div className={styles.leftContainer}>
-            <img src={item.icon} alt='icon' />
-            <div>
-              <div className={styles.itemTitle}>{item.title}</div>
-              <div className={styles.time}>{item.time}</div>
+        <Fade bottom>
+          <div className={styles.row} key={i}>
+            <div className={styles.leftContainer}>
+              <img src={item.icon} alt='icon' />
+              <div>
+                <div className={styles.itemTitle}>{item.title}</div>
+                <div className={styles.time}>{item.time}</div>
+              </div>
             </div>
-          </div>
 
-          <div className={styles.price}>{item.price}</div>
-        </div>
+            <div className={styles.price}>{item.price}</div>
+          </div>
+        </Fade>
       ))}
     </div>
   );

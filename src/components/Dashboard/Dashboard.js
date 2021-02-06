@@ -12,6 +12,7 @@ import OutflowCard from '../OutflowCard/OutflowCard';
 import RecentCard from '../RecentCard/RecentCard';
 import {Mobile} from '../../utils';
 import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
 
 class Dashboard extends React.Component {
   state = {
@@ -20,11 +21,16 @@ class Dashboard extends React.Component {
     sidebar: false,
   };
   render() {
+    console.log(Mobile);
     return (
       <div className={styles.container}>
-        <Slide left={Mobile} when={this.state.sidebar}>
-          {this.renderSidebar()}
-        </Slide>
+        {Mobile ? (
+          <Slide left={Mobile} when={Mobile && this.state.sidebar}>
+            {this.renderSidebar()}
+          </Slide>
+        ) : (
+          this.renderSidebar()
+        )}
 
         <div className={styles.mainContainer}>
           <div
@@ -96,9 +102,11 @@ class Dashboard extends React.Component {
             {this.state.drop && (
               <div className={styles.dropdown}>
                 {Dropdown.map((item, i) => (
-                  <div key={i} className={styles.dropdownList}>
-                    {item}
-                  </div>
+                  <Fade top>
+                    <div key={i} className={styles.dropdownList}>
+                      {item}
+                    </div>
+                  </Fade>
                 ))}
               </div>
             )}

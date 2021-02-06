@@ -73,3 +73,13 @@
 .sign {
   color: #fa4a84;
 }
+
+@media only screen and (max-width: 475px) {
+  .navbar {
+    display: none;
+  }
+
+  .already {
+    right: 56px;
+  }
+}

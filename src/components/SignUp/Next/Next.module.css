@@ -33,3 +33,13 @@
   height: 16px;
   object-fit: contain;
 }
+
+@media only screen and (max-width: 475px) {
+  .already {
+    right: 56px;
+  }
+
+  .backButton {
+    left: 24px;
+  }
+}

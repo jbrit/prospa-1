@@ -9,6 +9,7 @@
   position: relative;
   margin-bottom: 16px;
   cursor: pointer;
+  transition: min-height 1s ease-in-out !important;
 }
 
 .topContainer {

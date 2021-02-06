@@ -75,9 +75,7 @@ class Dashboard extends React.Component {
     return (
       <div className={styles.cardSection}>
         {AccountDetails.map((item, i) => (
-          <Fade bottom>
-            <AccountCard data={item} key={i} />
-          </Fade>
+          <AccountCard data={item} key={i} />
         ))}
         <Fade bottom>
           <SummaryCard />

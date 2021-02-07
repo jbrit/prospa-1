@@ -17,7 +17,7 @@ const OutflowCard = () => {
           <span className={styles.rightContainer}>
             <div className={styles.price}>{item.price}</div>
             <div className={styles.loader}>
-              <Slide left delay={500}>
+              <Slide left delay={500} duration={2000}>
                 <div
                   className={styles.loaderValue}
                   style={{width: `${item.percentage}%`}}

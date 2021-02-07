@@ -3,6 +3,7 @@ import styles from './Dashboard.module.css';
 import arrowDownThin from '../../assets/images/arrow-down-thin.svg';
 import avatar from '../../assets/images/avatar.svg';
 import menu from '../../assets/images/menu.svg';
+import arrowLeft from '../../assets/images/arrow-left.svg';
 import bell from '../../assets/images/bell.svg';
 import {AccountDetails, sideBarData, Dropdown} from '../../mock/dashboard';
 import prospa from '../../assets/images/gray-logo.svg';
@@ -34,10 +35,7 @@ class Dashboard extends React.Component {
         )}
 
         <div className={styles.mainContainer}>
-          <div
-            className={styles.header}
-            onClick={() => this.setState({sidebar: !this.state.sidebar})}
-          >
+          <div className={styles.header}>
             {Mobile && (
               <img
                 src={menu}
@@ -91,8 +89,15 @@ class Dashboard extends React.Component {
         style={{
           display: Mobile && !this.state.sidebar && `none`,
         }}
-        ref={this.container}
       >
+        {Mobile && (
+          <div
+            className={styles.cancel}
+            onClick={() => this.setState({sidebar: false})}
+          >
+            <img src={arrowLeft} alt='arrowLeft' />
+          </div>
+        )}
         <img src={prospa} alt='logo' />
         <div className={styles.sidebarHeader}>
           <div className={styles.initials}>BN</div>
@@ -123,24 +128,26 @@ class Dashboard extends React.Component {
           </div>
         </div>
 
-        {sideBarData.map((item, i) => (
-          <div
-            className={styles.list}
-            key={i}
-            onClick={() => this.setState({option: item.name})}
-          >
-            <img src={item.icon} alt={item.icon} />
+        <div>
+          {sideBarData.map((item, i) => (
             <div
-              style={{
-                color:
-                  this.state.option.toLowerCase() === item.name.toLowerCase() &&
-                  `var(--pink)`,
-              }}
+              className={styles.list}
+              key={i}
+              onClick={() => this.setState({option: item.name})}
             >
-              {item.name}
+              <img src={item.icon} alt={item.icon} />
+              <div
+                style={{
+                  color:
+                    this.state.option.toLowerCase() ===
+                      item.name.toLowerCase() && `var(--pink)`,
+                }}
+              >
+                {item.name}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     );
   }

@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route
-          path={["/", "/sign-in", "/next"]}
+          path={["/", "/sign-in", "/next", "/allocate"]}
           exact
           render={() => (
             <Layout dark>

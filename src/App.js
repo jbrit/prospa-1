@@ -19,13 +19,11 @@ function App() {
               <Route exact path="/" component={SignUp} />
               <Route exact path="/sign-in" component={SignIn} />
               <Route exact path="/next" component={Next} />
+              <Route exact path="/allocate" component={MoneyAllocation} />
             </Layout>
           )}
         />
         <Route path="/dashboard" component={Dashboard} />
-        <Layout dark>
-          <Route path="/allocate" component={MoneyAllocation} />
-        </Layout>
       </Switch>
     </div>
   );

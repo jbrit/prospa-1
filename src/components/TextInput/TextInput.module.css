@@ -44,6 +44,11 @@ input:valid ~ label {
   color: #fa4a84;
 }
 
+input:disabled ~ label {
+  font-size: 10px;
+  top: 7px;
+}
+
 .underline {
   position: absolute;
   bottom: 0px;

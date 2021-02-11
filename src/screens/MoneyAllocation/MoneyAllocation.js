@@ -5,9 +5,9 @@ import {
   setToDefault,
   updateWalletAllocation,
 } from "../../env";
-import TextInput from "../TextInput/TextInput";
-import Button from "../Button/Button";
-import Header from "../Header/Header";
+import TextInput from "../../components/TextInput/TextInput";
+import Button from "../../components/Button/Button";
+import Header from "../../components/Header/Header";
 
 class MoneyAllocation extends React.Component {
   constructor() {
@@ -57,8 +57,6 @@ class MoneyAllocation extends React.Component {
     const current = this.state.subAccount.data.find(
       (item) => item.biz_wallet_type === "current"
     )?.biz_wallet_id;
-
-    const getCurrentValue = this.state.input[current];
 
     const input = {
       ...this.state.input,

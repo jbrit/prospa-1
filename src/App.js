@@ -1,11 +1,11 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./screens/Dashboard/Dashboard";
 import Layout from "./components/Layout/Layout";
-import MoneyAllocation from "./components/MoneyAllocation/MoneyAllocation";
-import SignIn from "./components/SignIn/SignIn";
-import Next from "./components/SignUp/Next/Next";
-import SignUp from "./components/SignUp/SignUp";
+import MoneyAllocation from "./screens/MoneyAllocation/MoneyAllocation";
+import SignIn from "./screens/SignIn/SignIn";
+import Next from "./screens/SignUp/Next/Next";
+import SignUp from "./screens/SignUp/SignUp";
 
 function App() {
   return (

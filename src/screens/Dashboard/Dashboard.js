@@ -1,25 +1,25 @@
-import React from 'react';
-import styles from './Dashboard.module.css';
-import arrowDownThin from '../../assets/images/arrow-down-thin.svg';
-import avatar from '../../assets/images/avatar.svg';
-import menu from '../../assets/images/menu.svg';
-import arrowLeft from '../../assets/images/arrow-left.svg';
-import bell from '../../assets/images/bell.svg';
-import {AccountDetails, sideBarData, Dropdown} from '../../mock/dashboard';
-import prospa from '../../assets/images/gray-logo.svg';
-import Button from '../Button/Button';
-import AccountCard from '../AccountCard/AccountCard';
-import SummaryCard from '../SummaryCard/SummaryCard';
-import OutflowCard from '../OutflowCard/OutflowCard';
-import RecentCard from '../RecentCard/RecentCard';
-import {Mobile} from '../../utils';
-import Slide from 'react-reveal/Slide';
-import Fade from 'react-reveal/Fade';
+import React from "react";
+import styles from "./Dashboard.module.css";
+import arrowDownThin from "../../assets/images/arrow-down-thin.svg";
+import avatar from "../../assets/images/avatar.svg";
+import menu from "../../assets/images/menu.svg";
+import arrowLeft from "../../assets/images/arrow-left.svg";
+import bell from "../../assets/images/bell.svg";
+import { AccountDetails, sideBarData, Dropdown } from "../../mock/dashboard";
+import prospa from "../../assets/images/gray-logo.svg";
+import Button from "../../components/Button/Button";
+import AccountCard from "../../components/AccountCard/AccountCard";
+import SummaryCard from "../../components/SummaryCard/SummaryCard";
+import OutflowCard from "../../components/OutflowCard/OutflowCard";
+import RecentCard from "../../components/RecentCard/RecentCard";
+import { Mobile } from "../../utils";
+import Slide from "react-reveal/Slide";
+import Fade from "react-reveal/Fade";
 
 class Dashboard extends React.Component {
   state = {
     drop: false,
-    option: 'account',
+    option: "account",
     sidebar: false,
   };
 
@@ -39,17 +39,17 @@ class Dashboard extends React.Component {
             {Mobile && (
               <img
                 src={menu}
-                alt='menu'
+                alt="menu"
                 className={styles.menu}
-                onClick={() => this.setState({sidebar: !this.state.sidebar})}
+                onClick={() => this.setState({ sidebar: !this.state.sidebar })}
               />
             )}
             <div className={styles.headerText}>Dashboard</div>
             <div className={styles.wrapper}>
               <div className={styles.bell}>
-                <img src={bell} alt='bell' />
+                <img src={bell} alt="bell" />
               </div>
-              <img src={avatar} alt='avatar' />
+              <img src={avatar} alt="avatar" />
             </div>
           </div>
 
@@ -60,7 +60,7 @@ class Dashboard extends React.Component {
                 Here’s what has been happening in the last <span>7 days</span>
               </div>
             </div>
-            <Button title='Add a sub account' width />
+            <Button title="Add a sub account" width />
           </div>
 
           {this.renderCards()}
@@ -93,12 +93,12 @@ class Dashboard extends React.Component {
         {Mobile && (
           <div
             className={styles.cancel}
-            onClick={() => this.setState({sidebar: false})}
+            onClick={() => this.setState({ sidebar: false })}
           >
-            <img src={arrowLeft} alt='arrowLeft' />
+            <img src={arrowLeft} alt="arrowLeft" />
           </div>
         )}
-        <img src={prospa} alt='logo' />
+        <img src={prospa} alt="logo" />
         <div className={styles.sidebarHeader}>
           <div className={styles.initials}>BN</div>
 
@@ -110,9 +110,9 @@ class Dashboard extends React.Component {
           <div className={styles.dropdownContainer}>
             <div
               className={styles.arrowDown}
-              onClick={() => this.setState({drop: !this.state.drop})}
+              onClick={() => this.setState({ drop: !this.state.drop })}
             >
-              <img src={arrowDownThin} alt='down-arrow' />
+              <img src={arrowDownThin} alt="down-arrow" />
             </div>
             {this.state.drop && (
               <div className={styles.dropdown}>
@@ -133,7 +133,7 @@ class Dashboard extends React.Component {
             <div
               className={styles.list}
               key={i}
-              onClick={() => this.setState({option: item.name})}
+              onClick={() => this.setState({ option: item.name })}
             >
               <img src={item.icon} alt={item.icon} />
               <div
